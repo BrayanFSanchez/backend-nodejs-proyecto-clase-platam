@@ -1,8 +1,10 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var cors = require('cors');
 
 //Middleware
+app.use(cors()); //Permite peticiones de otros origenes
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
