@@ -11,7 +11,7 @@ class Database{
 
     conectar(){
         mongoose.connect(`mongodb://${host}:${port}/${bd}`)
-        .then(result=>console.log(result))
+        .then(result=>console.log('Se conecto a mongodb'))
         .catch(console=>console.log(error));
     }
 }
