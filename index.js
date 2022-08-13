@@ -10,7 +10,7 @@ var app = express();
 //Middleware
 app.use(cors()); //Permite peticiones de otros origenes
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/usuarios', usuariosRouter);
 
 app.get('/', function(req, res){

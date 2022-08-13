@@ -1,6 +1,8 @@
 var mongoose = require('mongoose');
 
-const DB_URI = 'mongodb+srv://Brayan:ms8mZpC2BuvsPU58@api-rest.nue8jbk.mongodb.net/platam?retryWrites=true&w=majority';
+var db = 'platam';
+
+const DB_URI = `mongodb+srv://Brayan:ms8mZpC2BuvsPU58@api-rest.nue8jbk.mongodb.net/${db}?retryWrites=true&w=majority`;
 
 mongoose.connect(DB_URI, {
     useNewUrlParser: true,
