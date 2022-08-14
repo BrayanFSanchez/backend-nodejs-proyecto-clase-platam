@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var admin = require('../models/admin');
 
-//Obtener todos los admins
+//Obtener los admins
 router.get('/', function(req, res){
     admin.find().then(result=>{
        res.send(result);
@@ -12,5 +12,7 @@ router.get('/', function(req, res){
         res.end();
     });
 });
+
+//http://localhost:8888/empresas/2/
 
 module.exports = router;

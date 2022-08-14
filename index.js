@@ -3,7 +3,8 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 //var testModule = require('./modules/test-module');
 var database = require('./modules/database');
-var usuariosRouter = require('./routes/usuarios-router');
+var adminsRouter = require('./routers/admins-router');
+var usuariosRouter = require('./routers/usuarios-router');
 
 var app = express();
 
@@ -11,6 +12,7 @@ var app = express();
 app.use(cors()); //Permite peticiones de otros origenes
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use('/admins', adminsRouter);
 app.use('/usuarios', usuariosRouter);
 
 app.get('/', function(req, res){
