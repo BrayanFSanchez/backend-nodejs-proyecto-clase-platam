@@ -80,7 +80,6 @@ router.delete('/:id', function(req,res){
 });
 
 //Obtener listado del carrito
-//http;//localhost/usuarios/1/carrito/1
 router.get('/:idUsuario/carritos/:idCarrito', function(req, res){
     res.send(`Obtener el carrito ${req.params.idCarrito} del usuario ${req.params.idUsuario}`);
     res.end();
@@ -95,6 +94,12 @@ router.get('/:idUsuario/carritos', function(req, res){
 //Guardar un producto en el carrito
 router.post('/:idUsuario/carritos/:idCarrito/producto', function(req, res){
     res.send(`Guardar un producto en el carrito ${req.params.idCarrito} del usuario ${req.params.idUsuario}`);
+    res.end();
+});
+
+//Crear un nuevo carrito
+router.post('/:idUsuario/carritos', function(req, res){
+    res.send(`Guardar un nuevo carrito para el usuario ${req.params.idUsuario}`);
     res.end();
 });
 
