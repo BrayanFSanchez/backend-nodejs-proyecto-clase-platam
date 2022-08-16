@@ -5,6 +5,7 @@ var cors = require('cors');
 var database = require('./modules/database');
 var adminsRouter = require('./routers/admins-router');
 var usuariosRouter = require('./routers/usuarios-router');
+var empresasRouter = require('./routers/empresas-router');
 
 var app = express();
 
@@ -14,6 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/admins', adminsRouter);
 app.use('/usuarios', usuariosRouter);
+app.use('/empresas', empresasRouter);
 
 app.get('/', function(req, res){
     res.send('Servidor backend en linea');
