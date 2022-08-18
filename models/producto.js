@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 var esquema = new mongoose.Schema({
     nombre: String,
-    correo: String
+    precio: Number
 });
 
-module.exports = mongoose.model('admins', esquema);
+module.exports = mongoose.model('productos', esquema);

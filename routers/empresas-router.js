@@ -1,5 +1,11 @@
 var express = require('express');
 var router = express.Router();
+var admin = require('../models/empresa');
+var admin = require('../models/pagina');
+var admin = require('../models/bloque');
+var admin = require('../models/archivo');
+var admin = require('../models/producto');
+var admin = require('../models/categoria');
 
 //Crear un empresa
 router.post('/', function(req, res){
@@ -51,13 +57,13 @@ router.post('/:idEmpresa/bloques', function(req, res){
 
 //Actualizar bloque de contenido
 router.put('/:idEmpresa/bloques/:idBloque', function(req, res){
-    res.send(`Se actualizó el bloque ${req.params.idArchivo} de la empresa ${req.params.idEmpresa}`);
+    res.send(`Se actualizó el bloque ${req.params.idBloque} de la empresa ${req.params.idEmpresa}`);
     res.end();
 });
 
 //Eliminar bloque de contenido
-router.delete('/:idEmpresa/bloques', function(req, res){
-    res.send(`Se eliminó un bloque de la empresa ${req.params.idEmpresa}`);
+router.delete('/:idEmpresa/bloques/:idBloque', function(req, res){
+    res.send(`Se eliminó el bloque ${req.params.idBloque} de la empresa ${req.params.idEmpresa}`);
     res.end();
 });
 

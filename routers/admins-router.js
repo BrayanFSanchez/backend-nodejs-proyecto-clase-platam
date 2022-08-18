@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var admin = require('../models/admin');
+var admin = require('../models/empresa');
+var admin = require('../models/plan');
+var admin = require('../models/tema');
 
 //Obtener los admins
 /*router.get('/', function(req, res){
@@ -27,13 +30,13 @@ router.post('/', function(req, res){
 });
 
 //Actualizar un administrador
-router.put('/:idAdmin', function(req,res){
+router.put('/:idAdmin', function(req, res){
     res.send(`Se actualizó el administrador ${req.params.idAdmin}`);
     res.end();
 });
 
 //Eliminar un administrador
-router.delete('/:idAdmin', function(req,res){
+router.delete('/:idAdmin', function(req, res){
     res.send(`Se eliminó el administrador ${req.params.idAdmin}`);
     res.end();
 });
@@ -45,7 +48,7 @@ router.get('/empresas', function(req, res){
 });
 
 //Eliminar una empresa
-router.delete('/empresas/:idEmpresa', function(req,res){
+router.delete('/empresas/:idEmpresa', function(req, res){
     res.send(`Se eliminó una empresa ${req.params.idEmpresa}`);
     res.end();
 });
